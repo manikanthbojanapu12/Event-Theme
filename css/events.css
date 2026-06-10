@@ -3,10 +3,27 @@
    ======================================== */
 
 /* ---------- Events Page Hero ---------- */
-.page-hero {
-  background-image: url('../assets/event-daytime-01.webp');
+.page-hero{
+    background: url('../assets/event-daytime-01.webp') center center/cover no-repeat;
+    min-height: 70vh;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Remove any blur overlay */
+.page-hero::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35); /* optional dark overlay */
+    backdrop-filter: none !important;
+    filter: none !important;
+}
+
+.page-hero .container{
+    position: relative;
+    z-index: 2;
+}
 /* ---------- Filters Section ---------- */
 .filters-section {
   padding: 0 0 20px;

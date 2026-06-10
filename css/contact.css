@@ -107,6 +107,13 @@
   background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-xl);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+body.theme-light .contact-form-wrapper {
+  background: #f8fafc;
+  border-color: rgba(15, 23, 42, 0.12);
 }
 
 .form-title {
@@ -156,6 +163,40 @@
   font-size: 15px;
   transition: var(--transition-base);
   width: 100%;
+}
+
+body.theme-light .contact-form-wrapper .form-group input,
+body.theme-light .contact-form-wrapper .form-group textarea,
+body.theme-light .contact-form-wrapper .form-group select {
+  background: #eef2f7;
+  color: var(--text-primary);
+}
+
+.contact-form-wrapper .form-group input:-webkit-autofill,
+.contact-form-wrapper .form-group input:-webkit-autofill:hover,
+.contact-form-wrapper .form-group input:-webkit-autofill:focus,
+.contact-form-wrapper .form-group textarea:-webkit-autofill,
+.contact-form-wrapper .form-group textarea:-webkit-autofill:hover,
+.contact-form-wrapper .form-group textarea:-webkit-autofill:focus,
+.contact-form-wrapper .form-group select:-webkit-autofill,
+.contact-form-wrapper .form-group select:-webkit-autofill:hover,
+.contact-form-wrapper .form-group select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-primary);
+  box-shadow: 0 0 0 1000px var(--bg-input) inset;
+  transition: background-color 9999s ease-out;
+}
+
+body.theme-light .contact-form-wrapper .form-group input:-webkit-autofill,
+body.theme-light .contact-form-wrapper .form-group input:-webkit-autofill:hover,
+body.theme-light .contact-form-wrapper .form-group input:-webkit-autofill:focus,
+body.theme-light .contact-form-wrapper .form-group textarea:-webkit-autofill,
+body.theme-light .contact-form-wrapper .form-group textarea:-webkit-autofill:hover,
+body.theme-light .contact-form-wrapper .form-group textarea:-webkit-autofill:focus,
+body.theme-light .contact-form-wrapper .form-group select:-webkit-autofill,
+body.theme-light .contact-form-wrapper .form-group select:-webkit-autofill:hover,
+body.theme-light .contact-form-wrapper .form-group select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #0f172a;
+  box-shadow: 0 0 0 1000px #eef2f7 inset;
 }
 
 .form-group input:focus,

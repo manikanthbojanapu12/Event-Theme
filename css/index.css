@@ -15,7 +15,7 @@
 
 .hero::before,
 .hero::after {
-  content: '';
+  content: none;
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
@@ -71,6 +71,7 @@
   object-fit: cover;
   transform: scale(1.005);
   animation: zoomInOut 18s ease-in-out infinite;
+  filter: contrast(1.06) saturate(1.08);
   image-rendering: auto;
   backface-visibility: hidden;
   will-change: transform;
@@ -79,7 +80,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10,11,20,0.28) 0%, rgba(5,8,16,0.88) 100%);
+  background: transparent;
   z-index: 1;
 }
 
@@ -1224,15 +1225,20 @@ body.theme-light .search-field {
 }
 
 .sched-badge{
-    text-decoration:none;
-    background:#ece7ff;
-    color:#6c63ff;
-    padding:8px 18px;
-    border-radius:25px;
-    font-weight:600;
-    white-space:nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;      /* same width for all buttons */
+    height: 42px;      /* same height for all buttons */
+    text-decoration: none;
+    background: #ece7ff;
+    color: #6c63ff;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-sizing: border-box;
 }
-
 @media (max-width:600px){
     .schedule-section{
         padding:64px 0;
