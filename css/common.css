@@ -627,6 +627,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  image-rendering: auto;
   color: white;
   isolation: isolate;
 }
@@ -1344,7 +1345,7 @@ button:hover svg,
 /* ---------- Back to Top ---------- */
 .back-to-top {
   position: fixed;
-  bottom: 30px;
+  bottom: 88px;
   right: 30px;
   width: 48px;
   height: 48px;
@@ -1374,6 +1375,13 @@ button:hover svg,
 .back-to-top:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 30px rgba(6, 182, 212, 0.5);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    right: 18px;
+    bottom: 86px;
+  }
 }
 
 /* ---------- Toast Notification ---------- */

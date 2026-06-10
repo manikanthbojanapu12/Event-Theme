@@ -60,10 +60,13 @@
         <button class="menu-toggle-btn" id="menuToggle">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
-        <div class="search-box">
+        <form class="search-box dashboard-search" action="404.html" method="get">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" placeholder="Search events, tickets...">
-        </div>
+          <input type="text" name="search" placeholder="Search events, tickets...">
+          <button type="submit" class="search-submit" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </form>
       </div>
       
       <div class="topbar-right">
@@ -71,7 +74,8 @@
           <div class="avatar" id="userAvatar">U</div>
           <div class="user-info">
             <span class="user-name" id="userNameDisplay">User</span>
-            <span class="user-role">Attendee</span>
+            <span class="user-role" id="userRoleDisplay">Client</span>
+            <span class="user-email" id="userEmailDisplay">client@stackly.com</span>
           </div>
         </div>
       </div>
@@ -452,6 +456,8 @@
       
       let displayName = 'User';
       let initials = 'U';
+      const displayEmail = userEmail || 'client@stackly.com';
+      const displayRole = 'Client';
       
       if (userFullName) {
         displayName = userFullName.split(' ')[0];
@@ -478,6 +484,12 @@
       
       const userNameDisplay = document.getElementById('userNameDisplay');
       if (userNameDisplay) userNameDisplay.textContent = userFullName || displayName;
+
+      const userRoleDisplay = document.getElementById('userRoleDisplay');
+      if (userRoleDisplay) userRoleDisplay.textContent = displayRole;
+
+      const userEmailDisplay = document.getElementById('userEmailDisplay');
+      if (userEmailDisplay) userEmailDisplay.textContent = displayEmail;
       
       const userAvatar = document.getElementById('userAvatar');
       if (userAvatar) userAvatar.textContent = initials;

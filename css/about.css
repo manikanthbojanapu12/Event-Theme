@@ -4,9 +4,7 @@
 
 /* ---------- About Page Hero ---------- */
 .page-hero {
-  background:
-    linear-gradient(115deg, rgba(3, 7, 18, 0.88) 0%, rgba(3, 7, 18, 0.66) 46%, rgba(3, 7, 18, 0.28) 100%),
-    url('../assets/services.webp') center/cover no-repeat;
+  background-image: url('../assets/contact_hero.webp');
 }
 
 /* ---------- Story Section ---------- */

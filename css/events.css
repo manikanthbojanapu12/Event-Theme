@@ -4,7 +4,7 @@
 
 /* ---------- Events Page Hero ---------- */
 .page-hero {
-  background: linear-gradient(135deg, rgba(25, 28, 35, 0.75) 0%, rgba(25, 28, 35, 0.75) 100%), url('../assets/event-daytime-01.webp') center/cover no-repeat;
+  background-image: url('../assets/event-daytime-01.webp');
 }
 
 /* ---------- Filters Section ---------- */
@@ -529,9 +529,43 @@
   .events-listing .events-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .tips-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
+  .filters-section,
+  .newsletter-section,
+  .highlights-section,
+  .categories-section,
+  .search-tips-section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .search-tips-section {
+    padding: 64px 0;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .categories-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tips-grid {
+    gap: 18px;
+    margin-top: 32px;
+  }
+
+  .tip-card {
+    padding: 24px 20px;
+  }
+
   .filters-bar {
     flex-direction: column;
     align-items: stretch;
@@ -611,6 +645,33 @@
 }
 
 @media (max-width: 480px) {
+  .categories-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .tip-card {
+    padding: 20px 16px;
+  }
+
+  .tip-number {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .tip-card h4 {
+    font-size: 16px;
+  }
+
+  .tip-card p {
+    font-size: 13px;
+  }
+
   .event-title {
     font-size: 16px;
   }
