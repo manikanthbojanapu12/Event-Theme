@@ -4,7 +4,7 @@
 
 /* ---------- Events Page Hero ---------- */
 .page-hero{
-    background: url('../assets/event-daytime-01.webp') center center/cover no-repeat;
+    background: url('../assets/eventimage.webp') center center/cover no-repeat;
     min-height: 70vh;
     position: relative;
     overflow: hidden;
